@@ -1,0 +1,14 @@
+{
+    "nameRequired": "name is required",
+    "nameNotEmpty": "name must not be empty",
+    "nameNotNumeric": "name must not be numeric",
+    "lastnameRequired": "lastname is required",     
+    "lastnameNotEmpty": "lastname must not be empty", 
+    "lastnameNotNumeric": "lastname must not be numeric",
+    "descriptionRequired": "description is required",
+    "descriptionNotEmpty": "description must not be empty",
+    "descriptionNotNumeric": "description must not be numeric",
+    "customerIdRequired": "customerId is required",     
+    "customerIdNotEmpty": "customerId must not be empty", 
+    "customerIdNotNumeric": "customerId must not be numeric"
+}

@@ -1,0 +1,5 @@
+{
+    "connectionDisabled": "Unable to connect to the database: ",
+    "dataNotObtained": "Data could not be obtained",
+    "somethingGoesWrong": "Something goes wrong" 
+}

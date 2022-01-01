@@ -1,0 +1,12 @@
+{
+    "connectionEnabled": "The connection to the base was successfully",
+    "serverPort": "Server on port: ",
+    "customerDeletedSuccess": "Customer deleted successfully",
+    "customerUpdatedSuccess": "Customer updated successfully",
+    "customerCreatedSuccess": "Customer created successfully",
+    "productDeletedSuccess": "Product deleted successfully",
+    "productUpdatedSuccess": "Product updated successfully",
+    "productCreatedSuccess": "Product created successfully",
+    "noData": "Empty",
+    "idNotExist": "ID does not exist"
+}
