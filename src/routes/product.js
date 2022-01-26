@@ -12,7 +12,7 @@ router.get('/', getProducts, (req, res) => {
 router.get('/:id', getProductById, (req, res) => {
 })
 
-router.get('/customer/:customerId', getProductsByCustomer, (req, res) => {
+router.get('/customer/:id', getProductsByCustomer, (req, res) => {
 })
 
 router.post('/', validateCreateOrUpdate, createProduct, (req, res) => {

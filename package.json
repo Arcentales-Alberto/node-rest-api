@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests/*.js --timeout 10000 --exit",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "casual": "^1.6.2",
     "chalk": "^4.0.0",
     "express": "^4.17.2",
     "express-validator": "^6.14.0",
@@ -19,6 +20,8 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "mocha": "^9.1.3",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
   }
 }

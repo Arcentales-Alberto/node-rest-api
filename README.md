@@ -24,4 +24,5 @@
 
 # Run API
     npm install
+    npm test
     npm run dev

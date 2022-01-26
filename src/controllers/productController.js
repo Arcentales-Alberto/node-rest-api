@@ -32,7 +32,7 @@ exports.getProductById = async (req, res) => {
 
 exports.getProductsByCustomer = async (req, res) => {
     try {
-        const { customerId } = req.params
+        const customerId = req.params.id
         const products = await Product.findAll({
             where: { customerId }
         })

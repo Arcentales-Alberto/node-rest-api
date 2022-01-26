@@ -5,7 +5,8 @@ const Product = require('./Product')
 const Customer = sequelize.define('Customers', {
     id: {
         type: Sequelize.INTEGER,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
     },
     name: {
         type: Sequelize.TEXT

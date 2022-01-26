@@ -4,7 +4,8 @@ const { sequelize } = require('../database/database')
 const Product = sequelize.define('Products', {
     id: {
         type: Sequelize.INTEGER,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
     },
     description: {
         type: Sequelize.TEXT
