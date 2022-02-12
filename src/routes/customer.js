@@ -1,14 +1,15 @@
 const { Router } = require('express')
-const { getCustomers,  getCustomerById, createCustomer, 
+const { getCustomers, getCustomerById, createCustomer,
         updateCustomer, deleteCustomer } = require('../controllers/customerController')
 const { validateCreateOrUpdate } = require('../validators/customer')
+const { cacheInit } = require('../middleware/cache')
 
 const router = Router()
 
-router.get('/', getCustomers, (req, res) => {
+router.get('/', cacheInit, getCustomers, (req, res) => {
 })
 
-router.get('/:id', getCustomerById, (req, res) => {
+router.get('/:id', cacheInit, getCustomerById, (req, res) => {
 
 })
 router.post('/', validateCreateOrUpdate, createCustomer, (req, res) => {

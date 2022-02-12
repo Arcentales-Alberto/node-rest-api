@@ -3,16 +3,17 @@ const {  getProducts,  getProductById, updateProduct,
          createProduct, deleteProduct, getProductsByCustomer 
       } = require('../controllers/productController')
 const { validateCreateOrUpdate } = require('../validators/product')
+const { cacheInit } = require('../middleware/cache')
 
 const router = Router()
 
-router.get('/', getProducts, (req, res) => {
+router.get('/', cacheInit, getProducts, (req, res) => {
 })
 
-router.get('/:id', getProductById, (req, res) => {
+router.get('/:id', cacheInit, getProductById, (req, res) => {
 })
 
-router.get('/customer/:id', getProductsByCustomer, (req, res) => {
+router.get('/customer/:id', cacheInit, getProductsByCustomer, (req, res) => {
 })
 
 router.post('/', validateCreateOrUpdate, createProduct, (req, res) => {
