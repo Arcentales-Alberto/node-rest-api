@@ -26,3 +26,6 @@
     npm install
     npm test
     npm run dev
+
+# RUN DOCKER
+    docker-compose -f docker-compose.yml -p node-api-rest --env-file .env up

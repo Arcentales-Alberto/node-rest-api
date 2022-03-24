@@ -1,0 +1,50 @@
+version: '3.1'
+
+volumes:
+  data_shopdb:
+
+services:
+  database:
+    env_file:
+      - .env
+    container_name: shop-database
+    image: mysql:5.7
+    restart: always
+    cap_add:
+      - SYS_NICE
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_DATABASE: ${DATABASE_NAME}
+    ports:
+      - "3307:3306"
+    volumes:
+      - data_shopdb:/var/lib/mysql
+      - "./src/SQL/script.sql:/docker-entrypoint-initdb.d/1.sql"
+    networks:
+      - backend
+
+  api:
+    env_file:
+      - .env
+    container_name: node-rest-api
+    build:
+      dockerfile: ${DOCKERFILE}
+      context: .
+    depends_on:
+      - database
+    links:
+      - database:database
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./mode_modules
+      - ./:/src
+    networks:
+     - backend
+    command: npm run dev
+
+networks:
+    backend:
+      driver: bridge

@@ -1,10 +1,10 @@
-
 const chalk = require('chalk')
 const app = require('./app')
 const logger = require('./logs/config')
 const infoMessage = require('./messages/infoMessage')
+const { SERVER_PORT } = require('./config/config')
 
-const port = process.env.APP_SERVER_PORT || 3000
+const port = SERVER_PORT || 3000
 
 async function main() {
     try {

@@ -1,5 +1,5 @@
 {
-    "connectionEnabled": "The connection to the base was successfully",
+    "connectionEnabled": "The connection to the database was successfully",
     "serverPort": "Server on port: ",
     "customerDeletedSuccess": "Customer deleted successfully",
     "customerUpdatedSuccess": "Customer updated successfully",

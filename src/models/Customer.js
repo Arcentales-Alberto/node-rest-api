@@ -1,8 +1,8 @@
-const {Sequelize} = require('sequelize')
+const { Sequelize } = require('sequelize')
 const { sequelize } = require('../database/database')
 const Product = require('./Product')
 
-const Customer = sequelize.define('Customers', {
+const Customer = sequelize.define('customers', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
